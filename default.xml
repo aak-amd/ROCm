@@ -1,43 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <remote name="rocm-org" fetch="https://github.com/ROCm/" />
-    <remote name="KhronosGroup" fetch="https://github.com/KhronosGroup/" />
     <default revision="refs/tags/rocm-6.0.2"
      remote="rocm-org"
      sync-c="true"
      sync-j="4" />
 <!--list of projects for ROCm-->
     <project name="ROCK-Kernel-Driver" />
-    <project name="ROCT-Thunk-Interface" />
-    <project name="ROCR-Runtime" />
-    <project name="amdsmi" />
-    <project name="rocm_smi_lib" />
-    <project name="rocm-core" />
-    <project name="rocm-cmake" />
-    <project name="rocminfo" />
-    <project name="rocm_bandwidth_test" />
-    <project name="rocprofiler" />
-    <project name="roctracer" />
-    <project path="ROCm-OpenCL-Runtime/api/opencl/khronos/icd" name="OpenCL-ICD-Loader" remote="KhronosGroup" revision="6c03f8b58fafd9dd693eaac826749a5cfad515f8" />
-    <project name="clang-ocl" />
-    <project name="rdc" />
+    <project groups="compile-rt" name="ROCT-Thunk-Interface" />
+    <project groups="compile-rt" name="ROCR-Runtime" />
+    <project groups="compile-rt" name="amdsmi" />
+    <project groups="compile-rt" name="rocm_smi_lib" />
+    <project groups="compile-rt" name="rocm-core" />
+    <project groups="compile-rt" name="rocm-cmake" />
+    <project groups="compile-rt" name="rocminfo" />
+    <project groups="compile-rt" name="rocm_bandwidth_test" />
+    <project groups="compile-rt" name="rocprofiler" />
+    <project groups="compile-rt" name="roctracer" />
+    <project groups="compile-rt" name="clang-ocl" />
+    <project groups="compile-rt" name="rdc" />
 <!--HIP Projects-->
-    <project name="HIP" />
-    <project name="HIP-Examples" />
-    <project name="clr" />
-    <project name="hipother" />
-    <project name="HIPIFY" />
-    <project name="HIPCC" />
+    <project groups="compile-rt" name="HIP" />
+    <project groups="compile-rt" name="HIP-Examples" />
+    <project groups="compile-rt" name="clr" />
+    <project groups="compile-rt" name="hipother" />
+    <project groups="compile-rt" name="HIPIFY" />
+    <project groups="compile-rt" name="HIPCC" />
 <!-- The following projects are all associated with the AMDGPU LLVM compiler -->
-    <project name="llvm-project" />
-    <project name="ROCm-Device-Libs" />
-    <project name="ROCm-CompilerSupport" />
-    <project name="half" revision="37742ce15b76b44e4b271c1e66d13d2fa7bd003e" />
+    <project groups="compile-rt" name="llvm-project" />
+    <project groups="compile-rt" name="ROCm-Device-Libs" />
+    <project groups="compile-rt" name="ROCm-CompilerSupport" />
 <!-- gdb projects -->
-    <project name="ROCgdb" />
-    <project name="ROCdbgapi" />
-    <project name="rocr_debug_agent" />
+    <project groups="compile-rt" name="ROCgdb" />
+    <project groups="compile-rt" name="ROCdbgapi" />
+    <project groups="compile-rt" name="rocr_debug_agent" />
 <!-- ROCm Libraries -->
+    <project groups="mathlibs" name="half" />
     <project groups="mathlibs" name="rocBLAS" />
     <project groups="mathlibs" name="Tensile" />
     <project groups="mathlibs" name="hipTensor" />
